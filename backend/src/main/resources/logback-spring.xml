@@ -17,10 +17,10 @@
     </springProfile>
 
     <springProfile name="dev">
-        <root level="warn">
+        <root level="debug">
             <appender-ref ref="Console"/>
         </root>
-        <logger name="org.springframework" level="info">
+        <logger name="org.springframework" level="debug">
             <appender-ref ref="Console"/>
         </logger>
         <logger name="io.diveni" level="debug" additivity="false">

@@ -30,8 +30,10 @@ import org.springframework.stereotype.Controller;
 import io.diveni.backend.principals.AdminPrincipal;
 import io.diveni.backend.principals.MemberPrincipal;
 import lombok.val;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 @Controller
+@CrossOrigin(origins = { "http://192.168.1.102:8080/","http://localhost:8080/"})
 public class WebsocketController {
 
   private static final Logger LOGGER = LoggerFactory.getLogger(WebsocketController.class);

@@ -34,7 +34,7 @@ public class CorsConfig {
     return new WebMvcConfigurer() {
       @Override
       public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**").allowedOrigins(SERVER_URL);
+        registry.addMapping("/**").allowedOrigins("http://192.168.1.102:8080/","http://localhost:8080/");
       }
     };
   }

@@ -11,6 +11,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 import io.diveni.backend.model.Session;
+import io.diveni.backend.repository.RepoImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +20,7 @@ import io.diveni.backend.repository.SessionRepository;
 @Service
 public class DatabaseService {
 
-  @Autowired SessionRepository sessionRepo;
+  SessionRepository sessionRepo = new RepoImpl();
 
   public Optional<Session> getSessionByID(String sessionID) {
     return Optional.ofNullable(sessionRepo.findBySessionID(sessionID));

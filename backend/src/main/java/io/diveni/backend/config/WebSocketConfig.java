@@ -34,7 +34,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
     registry
         .addEndpoint("/connect")
         .setHandshakeHandler(new PrincipalWebSocketHandler())
-        .setAllowedOrigins(SERVER_URL)
+        .setAllowedOrigins("http://192.168.1.102:8080/","http://localhost:8080/")
         .withSockJS();
   }
 }
